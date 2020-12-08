@@ -11,9 +11,11 @@
 |
 */
 //para poder utilizar la clase incluimos el model.(en esta caso Image)
-use App\Image;
+//use App\Image;
 
 Route::get('/', function () {
+
+    /* TESTTING THE ORM
 
     //conseguir todas las images de la tabla images
     $images = Image::all();
@@ -38,5 +40,10 @@ Route::get('/', function () {
     }
     
     die();
-    //return view('welcome');
+    */
+    return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
